@@ -1,6 +1,6 @@
 #! ./bin/python
 #
-# Minimal example of created an encrypted PGP message with pycrypto
+# Minimal example of created an encrypted PGP message in python
 # https://tools.ietf.org/html/rfc4880
 # © 2015 b@Zi.iS GPLv2
 
@@ -76,7 +76,7 @@ out += packet_len(p)
 out += buf[:len(p)+18]
 
 print("-----BEGIN PGP MESSAGE-----")
-print("Version: pgp.py 0.0.1")
+print("Version: " + sys.argv[0] + " 0.0.1")
 print()
 print(base64.b64encode(out).decode('ascii') + "=")
 print()
